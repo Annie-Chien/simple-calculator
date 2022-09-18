@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 25px;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  background: #eee;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 20% repeat(5, 1fr);
+  grid-gap: 12px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.container > * {
+  border-radius: 10px;
+  font-weight: 900;
+  color: #f54284;
+}
+
+.screen {
+  background: #eee;
+  grid-column: 1 / -1;
+  padding: 15px;
+  box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.4);
+  text-align: right;
+  word-break: break-all;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.previous-operand {
+  font-size: 1.3rem;
+  color: grey;
+}
+
+.btn {
+  background: #eee;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4),
+    -1px -2px 3px rgba(256, 256, 256, 1);
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  background: #233d63;
+}
+
+.hover {
+  background: #233d63;
+}
+
+.btn:focus {
+  background: green;
+}
+
+.equal {
+  grid-column: 4 / 5;
+  grid-row: 5 / 7;
+}
+
+.number:last-child {
+  grid-column: 1 / span 3;
+  grid-row: -2 / -1;
+}
